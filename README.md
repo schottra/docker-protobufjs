@@ -24,12 +24,6 @@ It will also generate Typescript definitions into `/gen/pb-js/mymodule.d.ts`.
 
 **_Note:_** All arguments placed after the `--` will be forwarded to `pbjs`. This gives you complete control over the behavior of the output so that you can tailor it to your needs. Please see the pbjs [command line reference](https://github.com/dcodeIO/protobuf.js#command-line) for more information on the available flags.
 
-## More examples
-Process multiple directories (`protos/core` and `protos/client`) using a shared root include path (`/defs/protos`).
-
-```sh
-docker run -v `pwd`:/defs schottra/docker-protobufjs:latest --module-name mymodule -d protos/core -d protos/client -- -t static-module -w es6 -p /defs/protos
-```
 
 ## More examples
 Process multiple directories (`protos/core` and `protos/client`) using a shared root include path (`/defs/protos`).
