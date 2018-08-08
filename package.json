@@ -1,0 +1,29 @@
+{
+  "name": "docker-protobufjs",
+  "version": "0.0.1",
+  "description": "A docker container image for generating code with protobuf.js",
+  "main": "generate-protobuf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schottra/docker-protobufjs.git"
+  },
+  "keywords": [
+    "docker",
+    "protobuf",
+    "protobufjs"
+  ],
+  "author": "Randy Schott <randyschott+npm@gmail.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/schottra/docker-protobufjs/issues"
+  },
+  "homepage": "https://github.com/schottra/docker-protobufjs#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "protobufjs": "^6.8.8",
+    "yargs": "^12.0.1"
+  }
+}
