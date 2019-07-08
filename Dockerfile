@@ -1,13 +1,11 @@
 FROM node:10-alpine
 
-RUN npm install -g yarn@1.9
-
 WORKDIR /code
 COPY package.json /code/package.json
-COPY yarn.lock /code/yarn.lock
+COPY package-lock.json /code/package-lock.json
 COPY generate-protobuf.js /code/generate-protobuf.js
+RUN npm install
 
-WORKDIR /code
-RUN yarn
+RUN ./node_modules/.bin/pbjs; exit 0
 
 ENTRYPOINT ["node", "/code/generate-protobuf.js"]
